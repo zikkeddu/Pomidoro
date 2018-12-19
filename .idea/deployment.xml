@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="Pomidoro_server" stopOnFirstError="true" deleteMissingItems="true" createEmptyFolders="true" notifyRemoteChanges="true" compareModeInSync="TIMESTAMP">
+    <serverData>
+      <paths name="Pomidoro_server">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/projects/pomidoro" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

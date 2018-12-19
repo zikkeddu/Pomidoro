@@ -1,0 +1,19 @@
+{
+  "name": "pomidoro",
+  "version": "1.0.0",
+  "description": "my vision of pomodoro app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server.js"
+  },
+  "author": "Franco Piras",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "nodemon": "^1.18.3",
+    "popper": "^1.0.1"
+  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<title id="page_title">Pomidoro</title>
+  	<link rel="icon" type="image/png" href="images/pomo.ico"/>
+  	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="style/index.css">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="javascript/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="javascript/bootstrap.min.js"></script>
+  	<script src="javascript/index.js" async></script>
+</head>
+<body>
+	<div class="container">
+		<div id="home_page">
+    		<div class="row" id="notify">
+				<div class="col-sm-12">
+					<div class="panel panel-success">
+						<div class="panel-heading" id="notify_pan"></div>
+						<audio id="audio">
+							<source src="sounds/quite-impressed.ogg" type="audio/ogg">
+							<source src="sounds/quite-impressed.mp3" type="audio/mpeg">
+							<source src="sounds/quite-impressed.m4r" type="audio/mpeg">
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</div>
+			</div>
+			<div class="row timer">
+				<div class="col-sm-4">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<script>
+                        (adsbygoogle = window.adsbygoogle || []).push({
+                            google_ad_client: "ca-pub-4286798832720676",
+                            enable_page_level_ads: true
+                        });
+					</script>
+				</div>
+				<div class="col-sm-4 pull-left text-center" id="timer">
+		    		<div id="timer_session"><small></small></div>
+					<div id="time">
+						<span id="minutes_timer"></span>
+						<span>:</span>
+						<span id="seconds_timer"></span>
+					</div>
+					<div>
+						<button id="timer_button" class="btn btn-success btn-circle" onclick="run_session()"></button>
+					</div>
+				</div>
+				<div class="col-sm-4"></div>
+			</div>
+			<div class="row link">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4 flexbox">
+					<a href="#" id="story" onclick="showPage('external_home','home_page')">
+						<span class="glyphicon glyphicon-eye-open"></span>
+						Really?!! Another Tomato?
+					</a>
+				</div>
+				<div class="col-sm-4"></div>
+			</div>
+			<div class="row functions">
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4 flexbox">
+					<span data-toggle="tooltip" title="Add a category panel" data-placement="top">
+						<a href="#" data-toggle="popover" id="cat" title="Add a category panel" data-placement="bottom">
+                       		<span class="glyphicon glyphicon-plus"></span>
+                    	</a>
+					</span>
+			    	<div id="popover-content-cat" class="hide">
+				    	<input type="text" id="cat_name" placeholder="Insert a category name here!">
+				    	<button type="submit" class="btn btn-primary" onclick="addCat('none')">Submit</button>
+                	</div>
+                	<span data-toggle="tooltip" title="Upload session to server" data-placement="top">
+			    		<a href="#" data-toggle="popover" id="upload" title="Choose a name for this session" data-placement="bottom">
+                       		<span class="glyphicon glyphicon-upload"></span>
+                    	</a>
+                	</span>
+                	<div id="popover-content-upload" class="hide">
+                    	<input type="text" id="upload_name" placeholder="Insert a file name here">
+                    	<button type="submit" class="btn btn-primary" onclick="ajaxRequest('api/sessions/', 'upload_name', 'post')">Submit</button>
+                	</div>
+                	<span data-toggle="tooltip" title="Download a saved session from server" data-placement="top">
+                    	<a href="#" data-toggle="popover" id="download" title="Choose a name file to retrieve" data-placement="bottom">
+                        	<span class="glyphicon glyphicon-download"></span>
+                    	</a>
+                	</span>
+                	<div id="popover-content-download" class="hide">
+                    	<input type="text" id="download_name" placeholder="Insert a file name here">
+                    	<button type="submit" class="btn btn-primary" onclick="ajaxRequest('api/sessions/', 'download_name', 'get', 'jsession')">Submit</button>
+                	</div>
+					<span>
+			        	<a href="#" data-toggle="tooltip" title="Erase all saved data" data-placement="top" onclick="erase()">
+							<span class="glyphicon glyphicon-erase"></span>
+						</a>
+					</span>
+				</div>
+				<div class="col-sm-4"></div>
+			</div>
+			<div class="row" id="current_title_row">
+                <div class="col-sm-4"></div>
+				<div class="col-sm-4 flexbox" id="current-title"></div>
+                <div class="col-sm-4"></div>
+			</div>
+			<div class="row" id="current_progress_row">
+				<div class="col-sm-12">
+					<div class="progress" id="current_progress_bar">
+						<div class="progress-bar progress-bar-success" role="progressbar" id="current_work1" style="width:0%"></div>
+						<div class="progress-bar progress-bar-info" role="progressbar" id="current_short1" style="width:0%"></div>
+						<div class="progress-bar progress-bar-success" role="progressbar" id="current_work2" style="width:0%"></div>
+						<div class="progress-bar progress-bar-info" role="progressbar" id="current_short2" style="width:0%"></div>
+						<div class="progress-bar progress-bar-success" role="progressbar" id="current_work3" style="width:0%"></div>
+						<div class="progress-bar progress-bar-info" role="progressbar" id="current_short3" style="width:0%"></div>
+						<div class="progress-bar progress-bar-success" role="progressbar" id="current_work4" style="width:0%"></div>
+						<div class="progress-bar progress-bar-warning" role="progressbar" id="current_long1" style="width:0%"></div>
+					</div>
+				</div>
+			</div>
+			<div class="row panels">
+				<div class="col-sm-12">
+					<div class="panel-group" id="pan_crew"></div>
+				</div>
+			</div>
+			<div id="newPages"></div>
+		</div>
+		<div id="external_home">
+			<h3>
+				<a href="#" onclick="showPage('home_page','external_home')">
+					<span class="glyphicon glyphicon-arrow-left"></span>
+					<strong>GO BACK TO HOME</strong>
+				</a>
+			</h3>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+#timer{ 
+    color:white;
+    font-family: Calibri, sans-serif; font-size: 40px; font-style: normal; font-variant: small-caps; font-weight: 700; line-height: 26px;
+    margin-top:10px;
+    margin-left: 50px;
+    border : 10px solid orange ;
+    border-radius:50%;
+    width:300px;
+    height:300px;
+    overflow:hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor:default;
+}
+
+#time{
+  font-size: 60px;
+  color:#F5DA81;
+  margin-top:30px;
+  text-align:center;
+  z-index:1;
+}
+
+#timer_session{
+  margin-top:50px;
+  text-align:center;
+  z-index:1;
+}
+
+#timer_button{
+    font-family: Arial Narrow, sans-serif; font-size: 20px; font-weight: 700; font-variant: small-caps;
+	    margin-top:40px;
+	    z-index:1;
+	    width: 70px;
+	    height: 70px;
+	    text-align: center;
+	    border-radius: 50px;
+}
+
+#current_progress_row,#external_home,#notify{
+	display:none;
+}
+
+#current_title_row{
+	display:none;
+	text-align: center;
+    display:none;
+}
+
+#current-title{
+	font: normal 1em 'Arial Black', Arial, sans-serif;
+	color:white;
+	text-transform: uppercase;
+	line-height: 2;
+	text-shadow: 1px 0 1px #333, 0 1px 1px #000;
+        text-align: justify; /* For Edge */
+        -moz-text-align-last: center; /* For Firefox prior 58.0 */
+        text-align-last: center;
+}
+
+#story{
+        font-family: Arial Narrow; font-size: 1.2em; font-variant: small-caps;
+}
+
+#first_access{
+    text-align: justify; /* For Edge */
+    -moz-text-align-last: center; /* For Firefox prior 58.0 */
+    text-align-last: center;
+}
+
+.center-block{
+    width:280px;
+    padding:10px;
+    margin-left:30px;
+}
+
+.center-block-8{
+    width:45vw;
+    margin-left:30px;
+}
+
+.flexbox{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.popover .popover-title , .tooltip .tooltip-title{
+    font-weight: bold;
+	color:black;
+}
+
+.panel{
+   background-color:#009099;
+   border : 5px solid orange ;
+   color:white;
+}
+
+.panel > .panel-heading{
+   background-color:#008080;
+   color:white;
+}
+
+.panel > .panel-heading > .panel-title{
+    font-weight: normal;
+    font-variant: normal;
+    font-style: normal;
+    font-size: 1.2em;
+    font-family: 'Arial Black', Arial, sans-serif;
+    color:white;
+}
+
+.progress{
+    margin-top:10px;
+	height:30px;
+	text-align: center;
+	z-index: 2;
+}
+
+.progress-bar {
+    font-family: Arial Narrow, sans-serif; font-size: 1.4vmax; font-variant: small-caps;
+    line-height: 30px;
+}
+
+.glyphicon:before, button{
+    margin-right: 3px;
+    margin-left: 3px;
+}
+
+.task_title{
+    margin-left: 15px;
+}
+
+.task_buttons{
+    margin-right: 15px;
+}
+
+input{
+        color:black;
+}
+
+a{
+	color:white;
+    font-style: normal;
+    font-size: 1em;
+    font-family: 'Arial Narrow', sans-serif;
+    font-variant: small-caps;
+    font-weight: 700;
+}
+
+p{
+	color:black;
+    font-style: normal;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: 'Arial Narrow', sans-serif;
+    font-variant: small-caps;
+	text-align: center;
+}
+
+i{
+	color:white;
+    font-family: Arial Narrow, sans-serif; font-size: 1.2em; font-variant: normal;
+        line-height: 0.1;
+}
+
+li{
+	color:white;
+}
+
+h3{
+    color:#F5DA81;
+}
+	
+body{
+   background-color:gray;
+   line-height: 2.8;
+}
+
+@media(max-width: 260px){
+    .container{
+        margin-left:20px;
+        margin-right:20px;
+    }
+    #timer_button{
+        text-align: left;
+    }
+    #timer{
+        margin-left:10px;
+    }
+    #first_access{
+        width:280px;
+        margin-left:20px;
+        margin-right:20px;
+    }
+}
+
+@media(max-width: 414px){
+    .container{
+        margin-left:20px;
+        margin-right:20px;
+    }
+    #timer_button{
+        text-align: left;
+    }
+    #timer{
+        margin-left:10px;
+    }
+    #first_access{
+        width:280px;
+        margin-left:20px;
+        margin-right:20px;
+    }
+}
